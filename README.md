@@ -294,7 +294,7 @@ ss:Button("AK-47",function()
 end)
 ss:Label("- -Broken Stuff- -")
 ss:Button("Rocket Spin",function() 
-power = 20000 -- change this to make it more or less powerful
+power = 1000 -- change this to make it more or less powerful
 game:GetService('RunService').Stepped:connect(function()
 game.Players.LocalPlayer.Character.Head.CanCollide = false
 game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false

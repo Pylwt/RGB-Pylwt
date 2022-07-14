@@ -292,6 +292,9 @@ end)
 ss:Button("AK-47",function()
     game:GetObjects("rbxassetid://149948769")[1].Parent=game.Players.LocalPlayer.Backpack
 end)
+ss:Button("Telekinisis Gun",function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/fauftxLe", true))()
+end)
 ss:Label("- -Broken Stuff- -")
 ss:Button("Rocket Spin",function() 
 power = 20000 -- change this to make it more or less powerful

@@ -294,7 +294,7 @@ ss:Button("AK-47",function()
 end)
 ss:Label("- -Broken Stuff- -")
 ss:Button("Rocket Spin",function() 
-power = 1000 -- change this to make it more or less powerful
+power = 20000 -- change this to make it more or less powerful
 game:GetService('RunService').Stepped:connect(function()
 game.Players.LocalPlayer.Character.Head.CanCollide = false
 game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
@@ -405,7 +405,7 @@ ss:Button("Mad City",function()
     pcall(loadstring(game:HttpGet("https://raw.githubusercontent.com/TrixAde/scripts/main/mad.lua")))
 end)
 ss:Button("Pet Sim X",function()
-    loadstring(game:HttpGet("https://www.scriptblox.com/raw/Project-Meow_421"))()
+    loadstring(game:HttpGet("https://pastebin.com/raw/BdvUGb2q"))()
 end)
 ss:Button("Work At A Pizza Place",function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/TrixAde/scripts/main/work-a-pizza-place.lua",true))()

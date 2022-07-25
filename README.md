@@ -399,6 +399,9 @@ notifSound.PlayOnRemove = true
 notifSound:Destroy()
 game.StarterGui:SetCore("SendNotification", {Title = "feFlip", Text = "feFlip loaded successfully!", Icon = "rbxassetid://505845268", Duration = 5, Button1 = "Okay"})
 end)
+ss:Button("Animations",function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Luciquad/bweq42/main/cheatersoulanimationchanger.lua'))()
+    end)
 ss:Slider("Walk Speed",0,1000,16,function(t)
 print(t)
 end)
@@ -661,10 +664,13 @@ end)
 ss:Button("Chat Spammer",function()
     while true do wait(0) 
 
-        local A_1 = "MADE BY PYLWT HUB" local A_2 = "All" 
+        local A_1 = "JOIN PYLWT HUB TODAY" local A_2 = "All" 
         local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) end
 end)
 ss:Label("- -Broken Stuff- -")
+ss:Button("Mouse Fling (Press E)",function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Pylwt/mouse-fling/main/README.md", true))()
+end)
 ss:Button("Crash Server",function()
     --// made my reestart
 --// fixed by daddy ewo
@@ -745,6 +751,35 @@ function onKeyPress(inputObject, gameProcessedEvent)
 end
 game:GetService("UserInputService").InputBegan:connect(onKeyPress)
 game:GetService("UserInputService").InputBegan:connect(onKeyPress) 
+end)
+ss:Button("OOF Spam",function()
+    _G.enabled = true -- Re-execute to turn off
+_G.speed = 110 -- Keep around 100 or it wont play
+local RunService = game:GetService("RunService");
+local Players = game:GetService("Players");
+local LocalPlayer = game:GetService("Players").LocalPlayer;
+local Character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait();
+local Humanoid = Character:WaitForChild("Humanoid") or Character:FindFirstChildOfClass("Humanoid");
+local HRP = Humanoid.RootPart or Humanoid:FindFirstChild("HumanoidRootPart")
+if not Humanoid or not _G.enabled then
+   if Humanoid and Humanoid.Health <= 0 then
+       Humanoid:Destroy()
+   end
+   return
+end
+Humanoid:SetStateEnabled(Enum.HumanoidStateType.Dead, false)
+Humanoid.BreakJointsOnDeath = false
+Humanoid.RequiresNeck = false
+local con; con = RunService.Stepped:Connect(function()
+   if not Humanoid then return con:Disconnect() end
+   Humanoid:ChangeState(Enum.HumanoidStateType.Running)  -- Change state so not die
+end)
+LocalPlayer.Character = nil
+LocalPlayer.Character = Character
+task.wait(Players.RespawnTime + 0.1)
+while task.wait(1/_G.speed) do
+   Humanoid:ChangeState(Enum.HumanoidStateType.Dead)
+end
 end)
 ss:Button("Clones",function()
     loadstring(game:GetObjects('rbxassetid://7339698872')[1].Source)() 
@@ -902,5 +937,5 @@ ss:Label("Server: .gg/QnbxmxMrJG")
 ss:Label("Thank you for choosing Pylwt Hub!")
 ss:Label("- - - - - - - - - - - - - - - - - - - - - - -")
 ss:Label("Theme: RGB Rainbow")
-ss:Label("Last Update: 23th Of July 2022")
-ss:Label("Version: 2.16")
+ss:Label("Last Update: 25th Of July 2022")
+ss:Label("Version: 2.17")
